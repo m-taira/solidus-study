@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161001033810) do
+ActiveRecord::Schema.define(version: 20161001120643) do
 
   create_table "friendly_id_slugs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "slug",                      null: false
@@ -434,6 +434,7 @@ ActiveRecord::Schema.define(version: 20161001033810) do
     t.datetime "updated_at"
     t.boolean  "promotionable",                      default: true
     t.string   "meta_title"
+    t.text     "preferences",          limit: 65535
     t.index ["available_on"], name: "index_spree_products_on_available_on", using: :btree
     t.index ["deleted_at"], name: "index_spree_products_on_deleted_at", using: :btree
     t.index ["name"], name: "index_spree_products_on_name", using: :btree
